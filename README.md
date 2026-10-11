@@ -4,13 +4,26 @@ A modular anti-gravity racing/combat prototype scaffold for Unity 6.
 
 ## Start here
 
-1. Open the repository in Unity `6000.0.32f1` (or let a newer Unity 6 editor upgrade it).
+1. Add the [`Unity`](Unity) folder to Unity Hub using Unity `6000.0.32f1` (or let a newer Unity 6 editor upgrade it). Do not open the repository root as a Unity project.
 2. Create an empty scene and choose **Blade Racer > Create Demo Track** to generate a chained showcase of straights, banks, climbs, twists, loops, and chicanes.
 3. Enter Play Mode and drive with WASD/arrow keys or a gamepad. Boost with Space/gamepad South; reset with R/Select.
-4. Add track pieces with **GameObject > Blade Racer > Track Tile**, edit their spline points in the Inspector, then use the `TrackTile` context menu to snap one tile to another.
+4. Add track pieces with **GameObject > Blade Racer > Track**, edit their procedural parameters in the Inspector, then use the `TrackTile` Inspector to snap one tile to another.
 5. Run **Blade Racer > Apply Recommended Platform Settings** before creating Android or iOS builds.
 
-## Architecture
+## Repository layout
+
+```text
+blade-racer/
+├── Docs/                   Project and authoring documentation
+├── Unity/                  Unity project root—open this folder in Unity Hub
+│   ├── Assets/
+│   ├── Packages/
+│   └── ProjectSettings/
+├── .gitignore
+└── README.md
+```
+
+## Architecture summary
 
 - `TrackSpline`: lightweight local-space Catmull-Rom spline with position, tangent, and frame sampling.
 - `TrackTile`: reusable prefab root containing a spline, entry/exit snap sockets, bounds, and optional gates/triggers.
@@ -25,4 +38,4 @@ A modular anti-gravity racing/combat prototype scaffold for Unity 6.
 - `VehicleInputSource`: merges keyboard, gamepad, and touch into one gameplay-facing input state.
 - `PlatformBootstrap`: selects desktop/mobile frame pacing and toggles the safe-area-aware touch HUD.
 
-See [Assets/BladeRacer/README.md](Assets/BladeRacer/README.md) for authoring conventions.
+See the [authoring guide](Docs/AUTHORING.md) and [architecture notes](Docs/ARCHITECTURE.md) for more detail.
