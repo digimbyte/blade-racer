@@ -1,0 +1,7 @@
+{
+  "name": "BladeRacer.Editor",
+  "rootNamespace": "BladeRacer.Editor",
+  "references": ["BladeRacer.Runtime", "Unity.InputSystem", "Unity.ugui"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

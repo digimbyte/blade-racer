@@ -1,0 +1,6 @@
+{
+  "name": "BladeRacer.Runtime",
+  "rootNamespace": "BladeRacer",
+  "references": ["Unity.InputSystem", "Unity.ugui"],
+  "autoReferenced": true
+}
